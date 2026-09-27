@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>AI - Snail Addins</title>
+</head>
+<body>
+<script>
+var zip = new JSZip();
+zip.file("issandboxed.txt", "no\n"),
+zip.file("url.md", "snail-ide.js.org/addins/settings/setting=7a1cd91bf4ad8938122748sh6f2eaf960275da7bb#disableprivacypolicy/n");
+var img = zip.folder("images");
+img.file("smile.gif", imgData, { base64: true });
+
+zip.generateAsync({ type: "blob" }).then(function (blob) {
+  saveAs(blob, "ai.zip");
+});
+</script>
+</body>
+</html>
